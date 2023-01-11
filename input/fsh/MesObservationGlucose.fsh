@@ -1,15 +1,4 @@
-Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-Alias: $fr-encounter = http://interopsante.org/fhir/StructureDefinition/FrEncounter
-Alias: $fr-practitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
-Alias: $fr-organization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
-Alias: $JDV-J157-MomentGlucose-ENS = https://mos.esante.gouv.fr/NOS/JDV_J157-MomentGlucose-ENS/FHIR/JDV-J157-MomentGlucose-ENS
-Alias: $JDV-J164-GlucoseNumberOfDays-ENS = https://mos.esante.gouv.fr/NOS/JDV_J164-GlucoseNumberOfDays-ENS/FHIR/JDV-J164-GlucoseNumberOfDays-ENS
-Alias: $JDV-J154-TypeGlucose-ENS = https://mos.esante.gouv.fr/NOS/JDV_J154-TypeGlucose-ENS/FHIR/JDV-J154-TypeGlucose-ENS
-Alias: $JDV-J163-GlucoseUnits-ENS = https://mos.esante.gouv.fr/NOS/JDV_J163-GlucoseUnits-ENS/FHIR/JDV-J163-GlucoseUnits-ENS
-Alias: $JDV-J155-MethodGlucoseSanguin-ENS = https://mos.esante.gouv.fr/NOS/JDV_J155-MethodGlucoseSanguin-ENS/FHIR/JDV-J155-MethodGlucoseSanguin-ENS
-Alias: $JDV-J156-MethodGlucoseInterstitiel-ENS = https://mos.esante.gouv.fr/NOS/JDV_J156-MethodGlucoseInterstitiel-ENS/FHIR/JDV-J156-MethodGlucoseInterstitiel-ENS
-Alias: $JDV-J148-ReferenceRangeAppliesTo-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J148-ReferenceRangeAppliesTo-CISIS/FHIR/JDV-J148-ReferenceRangeAppliesTo-CISIS
-Alias: $JDV-J153-TypeDiabete-ENS = https://mos.esante.gouv.fr/NOS/JDV_J153-TypeDiabete-ENS/FHIR/JDV-J153-TypeDiabete-ENS
+
 
 Profile: MesObservationGlucose
 Parent: $vitalsigns
@@ -62,10 +51,10 @@ L'extension MesMomentOfMeasurement (contexte de la mesure) est utilisée dans le
 * code.coding.system 1..
 * code.coding.code 1..
 
-* subject only Reference($fr-patient)
-* encounter only Reference($fr-encounter)
+* subject only Reference($fr-core-patient)
+* encounter only Reference($fr-core-encounter)
 * effective[x] only dateTime
-* performer only Reference(CareTeam or RelatedPerson or $fr-practitioner or PractitionerRole or $fr-organization or $fr-patient)
+* performer only Reference(CareTeam or RelatedPerson or $fr-core-practitioner or PractitionerRole or $fr-core-organization or $fr-core-patient)
 
 * value[x] only Quantity
 * valueQuantity.value ^short = "Valeur mesurée"

@@ -1,5 +1,4 @@
-Alias: $FrObservationBmi = http://interopsante.org/fhir/StructureDefinition/FrObservationBmi
-Alias: $JDV-J148-ReferenceRangeAppliesTo-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J148-ReferenceRangeAppliesTo-CISIS/FHIR/JDV-J148-ReferenceRangeAppliesTo-CISIS
+
 
 Profile: MesFrObservationBmi
 Parent: $FrObservationBmi

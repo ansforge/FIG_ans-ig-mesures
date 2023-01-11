@@ -1,11 +1,10 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mes-observation-pain-severity",
-  "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationPainSeverity",
+  "url": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-pain-severity",
   "version": "1.3",
   "name": "MesObservationPainSeverity",
   "status": "active",
-  "publisher": "ANS",
   "description": "Niveau de douleur - profil créé pour l'alimentation de l'Espace Numérique de Santé",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -62,7 +61,20 @@
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "min": 1,
-        "fixedCanonical": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationPainSeverity"
+        "fixedCanonical": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-pain-severity"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.extension:supportingInfo",
@@ -80,9 +92,9 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_ReasonForMeasurement",
+        "id": "Observation.extension:MesReasonForMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_ReasonForMeasurement",
+        "sliceName": "MesReasonForMeasurement",
         "short": "Motif de la mesure",
         "definition": "Motif de la mesure\r\nTexte libre",
         "min": 0,

@@ -1,7 +1,4 @@
-Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-Alias: $fr-encounter = http://interopsante.org/fhir/StructureDefinition/FrEncounter
-Alias: $fr-practitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
-Alias: $fr-organization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
+
 
 Profile: MesObservationHeadCircumference
 Parent: $vitalsigns
@@ -35,9 +32,9 @@ Id: mes-observation-head-circumference
 * code.coding[headCircumCode].code 1..
 * code.coding[headCircumCode].code = #8287-5 (exactly)
 
-* subject only Reference($fr-patient)
-* encounter only Reference($fr-encounter)
-* performer only Reference(CareTeam or RelatedPerson or $fr-patient or $fr-practitioner or PractitionerRole or $fr-organization)
+* subject only Reference($fr-core-patient)
+* encounter only Reference($fr-core-encounter)
+* performer only Reference(CareTeam or RelatedPerson or $fr-core-patient or $fr-core-practitioner or PractitionerRole or $fr-core-organization)
 
 * value[x] only Quantity
 * value[x] ^slicing.discriminator[0].type = #type

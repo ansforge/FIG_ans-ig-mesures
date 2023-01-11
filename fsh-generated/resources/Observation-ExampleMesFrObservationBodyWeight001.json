@@ -1,0 +1,41 @@
+{
+  "resourceType": "Observation",
+  "id": "ExampleMesFrObservationBodyWeight001",
+  "meta": {
+    "profile": [
+      "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-fr-observation-body-weight"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ],
+      "text": "Vital Signs"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7"
+      },
+      {
+        "code": "29463-7XX",
+        "system": "http://loinc.org",
+        "display": "Body weight"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "ExamplefrPatient001XX",
+    "display": "Pierre Durand",
+    "type": "Patient"
+  },
+  "effectiveDateTime": "2022-11-06"
+}

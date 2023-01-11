@@ -3,7 +3,7 @@
   "id": "mes-fr-observation-body-temperature",
   "url": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-fr-observation-body-temperature",
   "version": "1.3",
-  "name": "EnsFrObservationBodyTemperature",
+  "name": "MesFrObservationBodyTemperature",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -70,9 +70,9 @@
         "definition": "Permet de définir le niveau d'effort (au repos, à l'effort, après l'effort) lors de la mesure de la fréquence respiratoire"
       },
       {
-        "id": "Observation.extension:ENS_ReasonForMeasurement",
+        "id": "Observation.extension:MesReasonForMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_ReasonForMeasurement",
+        "sliceName": "MesReasonForMeasurement",
         "short": "Motif de la mesure",
         "definition": "Motif de la mesure\r\nTexte libre (ex. infection, insolation, vaccination…)",
         "min": 0,

@@ -3,7 +3,7 @@
   "id": "mes-fr-observation-bodyheight",
   "url": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-fr-observation-bodyheight",
   "version": "1.3",
-  "name": "EnsFrObservationBodyHeight",
+  "name": "MesFrObservationBodyHeight",
   "status": "active",
   "fhirVersion": "4.0.1",
   "mapping": [

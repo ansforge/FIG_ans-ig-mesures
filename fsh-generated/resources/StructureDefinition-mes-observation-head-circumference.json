@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mes-observation-head-circumference",
-  "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationHeadCircumference",
+  "url": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-head-circumference",
   "version": "1.3",
   "name": "MesObservationHeadCircumference",
   "status": "active",
@@ -60,7 +60,20 @@
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "min": 1,
-        "fixedCanonical": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationHeadCircumference"
+        "fixedCanonical": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-head-circumference"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.extension:supportingInfo",
@@ -75,13 +88,12 @@
               "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"
             ]
           }
-        ],
-        "isModifier": false
+        ]
       },
       {
-        "id": "Observation.extension:ENS_ReasonForMeasurement",
+        "id": "Observation.extension:MesReasonForMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_ReasonForMeasurement",
+        "sliceName": "MesReasonForMeasurement",
         "short": "Motif de la mesure",
         "definition": "Motif de la mesure",
         "min": 0,
@@ -93,8 +105,7 @@
               "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ReasonForMeasurement"
             ]
           }
-        ],
-        "isModifier": false
+        ]
       },
       {
         "id": "Observation.code.coding",

@@ -1,6 +1,4 @@
-Alias: $FrObservationHeartrate = http://interopsante.org/fhir/StructureDefinition/FrObservationHeartrate
-Alias: $JDV-J147-MethodHeartrate-ENS = https://mos.esante.gouv.fr/NOS/JDV_J147-MethodHeartrate-ENS/FHIR/JDV-J147-MethodHeartrate-ENS
-Alias: $JDV-J148-ReferenceRangeAppliesTo-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J148-ReferenceRangeAppliesTo-CISIS/FHIR/JDV-J148-ReferenceRangeAppliesTo-CISIS
+
 
 Profile: MesFrObservationHeartrate
 Parent: $FrObservationHeartrate

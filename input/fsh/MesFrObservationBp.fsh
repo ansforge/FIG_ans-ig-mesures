@@ -1,6 +1,3 @@
-Alias: $JDV-J149-BodySiteBP-ENS = https://mos.esante.gouv.fr/NOS/JDV_J149-BodySiteBP-ENS/FHIR/JDV-J149-BodySiteBP-ENS
-Alias: $JDV-J150-MethodBP-ENS = https://mos.esante.gouv.fr/NOS/JDV_J150-MethodBP-ENS/FHIR/JDV-J150-MethodBP-ENS
-Alias: $JDV-J148-ReferenceRangeAppliesTo-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J148-ReferenceRangeAppliesTo-CISIS/FHIR/JDV-J148-ReferenceRangeAppliesTo-CISIS
 
 Profile: MesFrObservationBp
 Parent: $FrObservationBp
@@ -22,7 +19,7 @@ Description: "Pression artérielle - profil créé pour l'alimentation de l'Espa
 
 * category[VSCat] ^sliceName = "VSCat"
 * category[VSCat].coding.display = "Signes vitaux" (exactly)
-* subject only Reference($fr-patient)
+* subject only Reference($fr-core-patient)
 * effective[x] only dateTime
 
 * dataAbsentReason.coding.system 1..

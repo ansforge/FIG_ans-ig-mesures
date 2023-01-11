@@ -40,31 +40,31 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/mes-fr-observation-bmi"
+        },
+        "name": "MesFrObservationBmi",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mes-fr-observation-bodyheight"
         },
-        "name": "EnsFrObservationBodyHeight",
+        "name": "MesFrObservationBodyHeight",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mes-fr-observation-body-temperature"
         },
-        "name": "EnsFrObservationBodyTemperature",
+        "name": "MesFrObservationBodyTemperature",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mes-fr-observation-body-weight"
         },
-        "name": "EnsFrObservationBodyWeight",
+        "name": "MesFrObservationBodyWeight",
         "description": "Poids du patient",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mes-fr-observation-bmi"
-        },
-        "name": "MesFrObservationBmi",
         "exampleBoolean": false
       },
       {
@@ -87,7 +87,7 @@
           "reference": "StructureDefinition/mes-observation-glucose"
         },
         "name": "MesObservationGlucose",
-        "description": "Glycémie - profil créé pour l'alimentation de l'Espace Numérique de Santé.\n\nCe profil permet de gérer 4 types d'indicateurs de glycémie:\n- le taux de glucose sanguin, mesuré en mg/dl\n- le taux de glucose interstitiel, mesuré en mg/dl\n- l’hémoglobine glyquée (Hb1Ac) mesurée en %\n- l’index de gestion de glycémie (IGG) qui procure une estimation de l’HbA1c également mesuré en %\n\nL'extension ENS_NumberOfDays permet de spécifier le nombre de jours dans la mesure du taux de glucose interstitiel et de l’index de gestion de glycémie (IGG) .\n\nL'extension ENS_MomentOfMeasurement (contexte de la mesure) est utilisée dans le cas de la mesure du glucose sanguin.",
+        "description": "Glycémie - profil créé pour l'alimentation de l'Espace Numérique de Santé.\n\nCe profil permet de gérer 4 types d'indicateurs de glycémie:\n- le taux de glucose sanguin, mesuré en mg/dl\n- le taux de glucose interstitiel, mesuré en mg/dl\n- l’hémoglobine glyquée (Hb1Ac) mesurée en %\n- l’index de gestion de glycémie (IGG) qui procure une estimation de l’HbA1c également mesuré en %\n\nL'extension MesNumberOfDays permet de spécifier le nombre de jours dans la mesure du taux de glucose interstitiel et de l’index de gestion de glycémie (IGG) .\n\nL'extension MesMomentOfMeasurement (contexte de la mesure) est utilisée dans le cas de la mesure du glucose sanguin.",
         "exampleBoolean": false
       },
       {
@@ -157,6 +157,20 @@
         "name": "Méthode de mesures de glycémie sanguine ou interstitielle",
         "description": "Méthode de mesures de glycémie sanguine ou interstitielle.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Observation/ExampleMesFrObservationBodyWeight001"
+        },
+        "name": "ExampleMesFrObservationBodyWeight001",
+        "exampleCanonical": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-fr-observation-body-weight"
+      },
+      {
+        "reference": {
+          "reference": "Patient/ExamplefrPatient001"
+        },
+        "name": "ExamplefrPatient001",
+        "exampleBoolean": true
       }
     ],
     "page": {

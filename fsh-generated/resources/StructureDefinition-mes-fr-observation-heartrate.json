@@ -77,9 +77,9 @@
         "definition": "La position du corps au moment de l'observation, par exemple debout, assis. A n'utiliser que lorsque la position du corps n'est pas pré-coordonnée dans le code d'observation."
       },
       {
-        "id": "Observation.extension:ENS_MomentOfMeasurement",
+        "id": "Observation.extension:MesMomentOfMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_MomentOfMeasurement",
+        "sliceName": "MesMomentOfMeasurement",
         "short": "Moment de la mesure",
         "definition": "Moment de la mesure\r\nTexte libre",
         "min": 0,

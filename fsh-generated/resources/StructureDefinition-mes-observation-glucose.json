@@ -5,7 +5,7 @@
   "version": "1.3",
   "name": "MesObservationGlucose",
   "status": "active",
-  "description": "Glycémie - profil créé pour l'alimentation de l'Espace Numérique de Santé.\n\nCe profil permet de gérer 4 types d'indicateurs de glycémie:\n- le taux de glucose sanguin, mesuré en mg/dl\n- le taux de glucose interstitiel, mesuré en mg/dl\n- l’hémoglobine glyquée (Hb1Ac) mesurée en %\n- l’index de gestion de glycémie (IGG) qui procure une estimation de l’HbA1c également mesuré en %\n\nL'extension ENS_NumberOfDays permet de spécifier le nombre de jours dans la mesure du taux de glucose interstitiel et de l’index de gestion de glycémie (IGG) .\n\nL'extension ENS_MomentOfMeasurement (contexte de la mesure) est utilisée dans le cas de la mesure du glucose sanguin.",
+  "description": "Glycémie - profil créé pour l'alimentation de l'Espace Numérique de Santé.\n\nCe profil permet de gérer 4 types d'indicateurs de glycémie:\n- le taux de glucose sanguin, mesuré en mg/dl\n- le taux de glucose interstitiel, mesuré en mg/dl\n- l’hémoglobine glyquée (Hb1Ac) mesurée en %\n- l’index de gestion de glycémie (IGG) qui procure une estimation de l’HbA1c également mesuré en %\n\nL'extension MesNumberOfDays permet de spécifier le nombre de jours dans la mesure du taux de glucose interstitiel et de l’index de gestion de glycémie (IGG) .\n\nL'extension MesMomentOfMeasurement (contexte de la mesure) est utilisée dans le cas de la mesure du glucose sanguin.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -58,6 +58,19 @@
         "fixedCanonical": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-glucose"
       },
       {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
         "id": "Observation.extension:supportingInfo",
         "path": "Observation.extension",
         "sliceName": "supportingInfo",
@@ -73,9 +86,9 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_ReasonForMeasurement",
+        "id": "Observation.extension:MesReasonForMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_ReasonForMeasurement",
+        "sliceName": "MesReasonForMeasurement",
         "short": "Motif de la mesure",
         "definition": "Motif de la mesure\r\nTexte libre (ex. diabète, surpoids, maladie du cœur et des vaisseaux, cholestérol…)",
         "min": 0,
@@ -90,9 +103,9 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_MomentOfMeasurement",
+        "id": "Observation.extension:MesMomentOfMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_MomentOfMeasurement",
+        "sliceName": "MesMomentOfMeasurement",
         "short": "Moment de la mesure",
         "definition": "Moment de la mesure",
         "min": 0,
@@ -107,7 +120,7 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_MomentOfMeasurement.value[x]",
+        "id": "Observation.extension:MesMomentOfMeasurement.value[x]",
         "path": "Observation.extension.value[x]",
         "binding": {
           "strength": "required",
@@ -116,9 +129,9 @@
         }
       },
       {
-        "id": "Observation.extension:ENS_NumberOfDays",
+        "id": "Observation.extension:MesNumberOfDays",
         "path": "Observation.extension",
-        "sliceName": "ENS_NumberOfDays",
+        "sliceName": "MesNumberOfDays",
         "short": "Nombre de jours",
         "definition": "Nombre de jours. \r\nUtilisé pour les mesures du taux de glucose interstitiel et l’index de gestion de glycémie.",
         "min": 0,
@@ -133,7 +146,7 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_NumberOfDays.value[x]",
+        "id": "Observation.extension:MesNumberOfDays.value[x]",
         "path": "Observation.extension.value[x]",
         "min": 1,
         "binding": {
@@ -143,9 +156,9 @@
         }
       },
       {
-        "id": "Observation.extension:ENS_DiabetisType",
+        "id": "Observation.extension:MesDiabetisType",
         "path": "Observation.extension",
-        "sliceName": "ENS_DiabetisType",
+        "sliceName": "MesDiabetisType",
         "min": 0,
         "max": "1",
         "type": [

@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mes-observation-steps-by-day",
-  "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationStepsByDay",
+  "url": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-steps-by-day",
   "version": "1.3",
   "name": "MesObservationStepsByDay",
   "status": "active",
@@ -60,7 +60,20 @@
         "id": "Observation.meta.profile",
         "path": "Observation.meta.profile",
         "min": 1,
-        "fixedCanonical": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ENS_ObservationStepsByDay"
+        "fixedCanonical": "http://interop.esante.gouv.fr/ci-sis/fhir/mesures/StructureDefinition/mes-observation-steps-by-day"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.extension:supportingInfo",
@@ -79,9 +92,9 @@
         ]
       },
       {
-        "id": "Observation.extension:ENS_ReasonForMeasurement",
+        "id": "Observation.extension:MesReasonForMeasurement",
         "path": "Observation.extension",
-        "sliceName": "ENS_ReasonForMeasurement",
+        "sliceName": "MesReasonForMeasurement",
         "short": "Motif de la mesure",
         "definition": "Motif de la mesure\r\nTexte libre (ex. diabète, surpoids, maladie du cœur et des vaisseaux, cholestérol…)",
         "min": 0,
@@ -207,7 +220,8 @@
       {
         "id": "Observation.valueQuantity.unit",
         "path": "Observation.valueQuantity.unit",
-        "min": 1
+        "min": 1,
+        "fixedString": "steps/day"
       },
       {
         "id": "Observation.valueQuantity.system",
